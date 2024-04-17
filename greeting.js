@@ -10,8 +10,7 @@ function greet(name, language) {
     greeting = "Good " + timeOfDay;
 
   }
-
   console.log(greeting + ", " + name + "!");
 }
 
-greet("World", "es");
+greet("World", "s");
