@@ -1,17 +1,14 @@
 function greet(name, language) {
-  var greeting = "Hello";
+  let timeOfDay = "";
+  let currentHour = new Date().getHours();
   if (language === "es") {
-      greeting = "Hola";
+      timeOfDay = currentHour < 12 ? "Buenos días" : currentHour < 18 ? "Buenas tardes" : "Buenas noches";
   } else if (language === "fr") {
-      greeting = "Bonjour";
+      timeOfDay = currentHour < 12 ? "Bonjour" : currentHour < 18 ? "Bonjour" : "Bonsoir";
+  } else {
+      timeOfDay = currentHour < 12 ? "Good morning" : currentHour < 18 ? "Good afternoon" : "Good evening";
   }
-  if (greeting !== "Hello") {
-    console.log(greeting + ", " + name + "!");
-    return;
-  }
-  var currentHour = new Date().getHours();
-  var timeOfDay = currentHour < 12 ? "morning" : currentHour < 18 ? "afternoon" : "evening";
-  console.log("Good " + timeOfDay + ", " + name + "!");
+  console.log(timeOfDay + ", " + name + "!");
 }
 
 greet("World", "es");
