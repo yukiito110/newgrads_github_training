@@ -20,7 +20,8 @@ function greet(name, language="en") {
   var currentHour = new Date().getHours();
   var timeOfDayIndex = currentHour < 12 ? 0 : currentHour < 18 ? 1 : 1;
 
-  console.log(greetingMap[language][timeOfDayIndex] + ", " + name + "!");
+  let greeting = greetingMap[language][timeOfDayIndex]
+  console.log(greeting + ", " + name + "!");
 }
 
 greet("World");
