@@ -6,7 +6,9 @@ function greet(name, language) {
   } else if (language === "fr") {
     greeting = currentHour < 18 ? "Bonjour" : "Bonne soirée";
   } else {
-    greeting = currentHour < 12 ? "morning" : currentHour < 18 ? "afternoon" : "evening";
+    timeOfDay = currentHour < 12 ? "morning" : currentHour < 18 ? "afternoon" : "evening";
+    greeting = "Good " + timeOfDay;
+
   }
 
   console.log(greeting + ", " + name + "!");
